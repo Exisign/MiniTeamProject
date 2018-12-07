@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="y18.m11.d29.dao.replyDao">
+
+ <select id="reply" resultType="ReplyDto">
+        SELECT * FROM anony_reply where #{param1} = anony_num
+    </select>
+    
+    <insert id="insertReply">
+    insert into anony_reply (anony_num, reply_num, reply_content) values (#{param1}, myreply_seq.nextval, #{param2})
+    
+    </insert>
+
+
+
+
+</mapper>

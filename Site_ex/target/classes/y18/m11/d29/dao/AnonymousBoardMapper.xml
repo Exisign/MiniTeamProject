@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="y18.m11.d29.dao.AnonymousBoardDao">
+  <select id="listDao" resultType="Anonymous">
+  SELECT * FROM ANONY_BOARD ORDER BY anony_num DESC
+  </select>
+  
+  <insert id="writeDao">
+  insert into anony_board (anony_num, anony_title, anony_content, user_id) values (anony_seq.nextval, #{param1}, #{param2}, #{param3})
+  </insert>
+  
+  <delete id="deleteDao">
+  delete from anony_board where anony_num = #{param1} 
+  </delete>
+  
+  <select id="contentView" resultType="Anonymous">
+  select * from anony_board where anony_num = #{param1}
+  </select>
+  
+  <update id="upHit">
+  update anony_board set anony_view_count = anony_view_count + 1 where anony_num = #{param1}
+  </update>
+  
+  <update id="modify">
+  update anony_board set anony_title = #{param1}, anony_content = #{param2} where anony_num = #{param3}
+  </update>
+  
+<select id="searchList" resultType="Anonymous">
+  SELECT * FROM anony_board where anony_title LIKE '%${value}%' OR anony_content LIKE '%${value}%' ORDER BY anony_num DESC
+ </select>
+  
+  </mapper>

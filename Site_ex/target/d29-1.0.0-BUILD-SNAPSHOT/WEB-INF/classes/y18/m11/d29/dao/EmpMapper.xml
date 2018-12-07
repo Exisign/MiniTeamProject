@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+	"-//mybatis.org//DTDMapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="y18.m11.d29.dao.EmpDao">
+	<resultMap type="Emp" id="emprrr">
+		<result property="empno" column="empno" javaType="int"/>
+		<result property="ename" column="ename" javaType="string"/>
+		<result property="job" column="job" javaType="string"/>
+		<result property="mgr" column="mgr" javaType="int"/>
+		<result property="hiredate" column="hiredate" javaType="java.sql.Date" jdbcType="DATE"/>
+		<result property="sal" column="sal" javaType="double"/>
+		<result property="comm" column="comm" javaType="double"/>
+		<result property="deptno" column="deptno" javaType="int"/>
+	</resultMap>
+	
+	<select id="getAllEmpCount" resultType="int"> select count(*) from emp</select>
+	<select id="selectEmp" parameterType="int" resultType="Emp">select empno,ename,job,mgr,hiredate,sal,comm,deptno from emp where empno =#{empno}</select>
+	<select id="getAllEmpno" resultType="int"> select empno from emp </select>
+	<insert id="insertEmp" parameterType="Emp"> insert into emp(empno,ename,job,mgr,hiredate,sal,comm,deptno) values (#{empno},#{ename},#{job},#{mgr},sysdate,#{sal},#{comm},#{deptno}) </insert>
+	<select id="getAllEmps" resultType="Emp"> select * from emp </select>
+	<update id="updateEmp" parameterType="Emp"> update emp setename=#{ename},job=#{job},mgr=#{mgr}, hiredate=#{hiredate,jdbcType=DATE}, sal=#{sal},comm=#{comm},deptno=#{deptno} where empno=#{empno} </update>
+	<delete id="deleteEmp" parameterType="int"> delete from emp where empno=#{empno}</delete>
+</mapper>
