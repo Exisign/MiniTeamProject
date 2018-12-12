@@ -42,7 +42,7 @@ public class NoticeController {
 	}
 	
 	
-	@RequestMapping("notice/list")
+	@RequestMapping("/list")
 	public String list(Model model) {
 		NoticeDao dao = sqlSession.getMapper(NoticeDao.class);
 		System.out.println(dao.listDao());

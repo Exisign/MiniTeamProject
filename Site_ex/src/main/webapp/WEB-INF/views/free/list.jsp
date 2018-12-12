@@ -48,6 +48,7 @@ font-size:20px;
 font-weight:bold;
 margin: 50px auto;
 padding: 10px auto;
+background-color: pink;
 }
 
 </style>
@@ -80,12 +81,17 @@ padding: 10px auto;
 		</tr>
 		<tr>
 			<div id="search">
-				<td colspan="5"><form id="searchForm" action="list2" method="get" style="margin: 0; padding: 0;">
-					<p style="margin: 0;padding: 0;">
+				<td colspan="5">			
+					<form id="searchForm" action="list2" method="get" style="margin: 0; padding: 0;">
 						<input type="text" name="searchWord" size="15" maxlength="30"/>
 						<input type="submit" value="검색"/>
-					</p>
-				</form></td>
+						<select name="search_select" form="searchForm">	
+							<option value="search_title">제목
+							<option value="search_name">글쓴이
+							<option value="search_content">본문
+						</select>
+					</form>
+				</td>
 			</div>
 		</tr>
 	</table>

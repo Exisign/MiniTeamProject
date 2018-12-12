@@ -14,19 +14,6 @@
 		return true;
 	}
 </script>
-<style>
-
-body {
-	background:
-		url(https://images.pexels.com/photos/1366870/pexels-photo-1366870.jpeg?cs=srgb&dl=airplane-backlit-dawn-1366870.jpg&fm=jpg)
-		no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-</style>
 </head>
 <body>
 

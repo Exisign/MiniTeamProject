@@ -38,8 +38,6 @@ height: 20%;
 </head>
 
 <body>
-
-
 <table class="table">
 	<form action="write" method="post">
 		<tr>

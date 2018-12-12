@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,29 +47,29 @@ height: 20%;
 		<form action="modify?free_num=${modify_view.free_num}" method="post">
 			<input type="hidden" name="free_num" value="${modify_view.free_num}">  
 			<tr>
-				<td>¹øÈ£</td>
+				<td>ë²ˆí˜¸</td>
 				<td>${modify_view.free_num}</td>
 			</tr>
 			<tr>
-				<td>È÷Æ®</td>
+				<td>íˆíŠ¸</td>
 				<td>${modify_view.free_hit}</td>
 			</tr>
 			<tr>
-				<td>ÀÌ¸§</td>
+				<td>ì´ë¦„</td>
 				<td><input type="text" name="fName" value="${modify_view.free_name}"></td>
 			</tr>
 			<tr>
-				<td>Á¦¸ñ</td>
+				<td>ì œëª©</td>
 				<td><input type="text" name="fTitle" value="${modify_view.free_title}">
 			</tr>				
 			<tr>
-				<td>³»¿ë</td>
+				<td>ë‚´ìš©</td>
 				<td><textarea rows="10" name="fContent">${modify_view.free_content}</textarea></td>
 			</tr>
 			<tr>
  				<td colspan="2">
-					<input type="submit" value="¼öÁ¤"/>&nbsp;&nbsp;
-						<a href="list">Ãë¼Ò</a>&nbsp;&nbsp;
+					<input type="submit" value="ìˆ˜ì •"/>&nbsp;&nbsp;
+						<a href="list">ì·¨ì†Œ</a>&nbsp;&nbsp;
 				</td> 
 			</tr>
 		</form>

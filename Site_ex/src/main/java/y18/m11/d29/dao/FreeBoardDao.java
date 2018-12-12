@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.io.ResolverUtil.Test;
 
 import y18.m11.d29.domain.FreeBoard;
+import y18.m11.d29.domain.FreeBoardReply;
 
 public interface FreeBoardDao {
 	public ArrayList<FreeBoard> list();
@@ -18,7 +19,8 @@ public interface FreeBoardDao {
 	public void uphit(int free_num);
 	public List<Test> testlist(@Param("pagenum") int pagenum, @Param("contentnum") int contentnum);
 	public int testcount();
-	public ArrayList<FreeBoard> getArticleList(String searchWord);
-	
-
+	public ArrayList<FreeBoard> getArticleList(String search_select, String searchWord);
+	public void reply_input(int free_num, String reply_num, String reply_name, String reply_password, String reply_content);
+	public ArrayList<FreeBoardReply> reply_get(int free_num);
+	public void reply_delete(String reply_delete);
 }
