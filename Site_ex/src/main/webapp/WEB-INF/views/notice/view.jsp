@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-list.jsp
+list.jsp sujung
 </body>
 </html>
